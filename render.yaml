@@ -1,11 +1,9 @@
 services:
   - type: web
     name: n8n
-    runtime: image
-    image:
-      name: n8nio/n8n
-      tag: latest
+    env: docker
     plan: free
+    image: n8nio/n8n:latest
     autoDeploy: true
     envVars:
       - key: N8N_PORT
